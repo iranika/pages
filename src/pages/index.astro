@@ -1,7 +1,7 @@
 ---
 // Component Imports
 import Counter from '../components/Counter.vue';
-
+import Editor from '../components/Editor.vue';
 // Full Astro Component Syntax:
 // https://docs.astro.build/basics/astro-components/
 ---
@@ -22,12 +22,14 @@ import Counter from '../components/Counter.vue';
 				padding: 2rem;
 			}
 		</style>
+		<script src="https://unpkg.com/@primeuix/themes/umd/aura.js"></script>
 	</head>
 	<body>
 		<main>
-			<Counter client:visible>
+			<!-- <Counter client:visible>
 				<h1>Hello, Vue!</h1>
-			</Counter>
+			</Counter> -->
+			<Editor client:load></Editor>
 		</main>
 	</body>
 </html>
