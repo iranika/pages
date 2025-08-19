@@ -1,0 +1,21 @@
+---
+// import Layout from '../layouts/Layout.astro';
+
+import PrintLabel from '../components/PrintLabel.vue';
+
+---
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <base target="_top">
+  <meta charset="UTF-8">
+  <script src="https://unpkg.com/pagedjs/dist/paged.min.js"></script>
+
+</head>
+
+<body>
+  <PrintLabel client:load />
+</body>
+
+</html>

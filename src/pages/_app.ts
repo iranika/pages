@@ -6,6 +6,9 @@ export default (app: App) => {
   app.use(PrimeVue, {
     theme: {
         preset: Aura,
+        options: {
+            darkModeSelector: 'light'
+        }
     }
   });
 };
