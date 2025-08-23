@@ -9,6 +9,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/mdx": "^4.3.4",
     "@astrojs/vue": "^5.1.0",
     "@primeuix/themes": "^1.2.3",
     "astro": "^5.12.9",

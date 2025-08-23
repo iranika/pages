@@ -2,284 +2,247 @@
 // Component Imports
 import Counter from "../components/Counter.vue";
 import Editor from "../components/Editor.vue";
+import "./bookmarklet/style.css";
 // Full Astro Component Syntax:
 // https://docs.astro.build/basics/astro-components/
 ---
 
 <html lang="ja">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<style>
-			html,
-			body {
-				font-family: system-ui;
-				margin: 0;
-			}
-			body {
-				padding: 2rem;
-			}
-		</style>
-	</head>
-	<body>
-		<main>
-			<body>
-				<div class="container-lg px-3 my-5 markdown-body">
-					<h1>iranika109</a></h1>
-					<h1 id="プロフィール">プロフィール</h1>
-					<p><img src="./icon.jpg" width="200" /></p>
-					<p>
-						名前：いらにか（iranika）<br />
-						※Twitterのアイコンは頻繁に変わります。
-					</p>
-					<h2 id="contact-as">
-						Contact as<a
-							class="anchorjs-link"
-							href="#contact-as"
-							aria-label="Anchor"
-							data-anchorjs-icon=""
-							style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"
-						></a>
-					</h2>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <style>
+      html,
+      body {
+        font-family: system-ui;
+        margin: 0;
+      }
+      body {
+        padding: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <h1>iranika109</h1>
+      <div class="details">
+        <span id="author" class="author">iranika109</span><br />
+      </div>
+    </div>
+    <div id="content">
+      <h1 id="プロフィール">プロフィール</h1>
+      <p><img src="./icon.jpg" width="200" /></p>
+      <p>
+        名前：いらにか（iranika）<br />
+        ※Twitterのアイコンは頻繁に変わります。
+      </p>
+      <h2 id="contact-as">
+        Contact as<a
+          class="anchorjs-link"
+          href="#contact-as"
+          aria-label="Anchor"
+          style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a>
+      </h2>
 
-					<ul>
-						<li>
-							Twitter: <a href="https://twitter.com/happy_packet"
-								>いらにか(@happy_packet)</a>
-						</li>
-						<li>
-							Github: <a href="https://github.com/iranika"
-								>iranika</a>
-						</li>
-					</ul>
+      <ul>
+        <li>
+          Twitter: <a href="https://twitter.com/happy_packet"
+            >いらにか(@happy_packet)</a
+          >
+        </li>
+        <li>
+          Github: <a href="https://github.com/iranika">iranika</a>
+        </li>
+      </ul>
 
-					<h2 id="公開しているアプリ">
-						公開しているアプリ<a
-							class="anchorjs-link"
-							href="#公開しているアプリ"
-							aria-label="Anchor"
-							data-anchorjs-icon=""
-							style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"
-						></a>
-					</h2>
+      <h2 id="公開しているアプリ">
+        公開しているアプリ<a
+          class="anchorjs-link"
+          href="#公開しているアプリ"
+          aria-label="Anchor"
+          style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a>
+      </h2>
 
-					<ul>
-						<li>
-							<a href="https://movue.iranika.info/"
-								>みちくさびゅあー</a
-							> スマホ向けの道草屋ばっくやーど漫画ビュアー。公式認定済。
-						</li>
-						<li>
-							<a href="https://stamp.iranika.info/"
-								>Nikaスタンプ</a
-							> 道草屋のスタンプっぽい画像を活用するアプリ。
-						</li>
-						<li>
-							<a href="https://iranika.github.io/BrowseNowRIP/"
-								>BrowseNowRIP</a
-							> 閲覧中のWEBページをツイートするためのブックマークレットアプリ。
-						</li>
-						<li>
-							<a href="https://github.com/iranika/collie"
-								>collie</a
-							> Webブラウザテストを対話形式で記述&amp;検証するためのツール。Scoop
-							manifest付属。
-						</li>
-						<li>
-							<a href="https://mimica.iranika.info/">MimiCa</a> 実験場。思いついたアプリのプロトタイプ公開場所。
-						</li>
-					</ul>
+      <ul>
+        <li>
+          <a href="https://movue.iranika.info/">みちくさびゅあー</a> スマホ向けの道草屋ばっくやーど漫画ビュアー。公式認定済。
+        </li>
+        <li>
+          <a href="https://stamp.iranika.info/">Nikaスタンプ</a> 道草屋のスタンプっぽい画像を活用するアプリ。
+        </li>
+        <li>
+          <a href="https://iranika.github.io/BrowseNowRIP/">BrowseNowRIP</a> 閲覧中のWEBページをツイートするためのブックマークレットアプリ。
+        </li>
+        <li>
+          <a href="https://github.com/iranika/collie">collie</a> Webブラウザテストを対話形式で記述&amp;検証するためのツール。Scoop
+          manifest付属。
+        </li>
+        <li>
+          <a href="https://mimica.iranika.info/">MimiCa</a> 実験場。思いついたアプリのプロトタイプ公開場所。
+        </li>
+      </ul>
 
-					<p>
-						雑なおもちゃ箱→<a href="./bookmarklet/">ブックマークレット ボックス</a>
-						（ブックマークレット、実はモバイルブラウザでも動くんです）
-					</p>
+      <p>
+        雑なおもちゃ箱→<a href="./bookmarklet/">ブックマークレット ボックス</a>
+        （ブックマークレット、実はモバイルブラウザでも動くんです）
+      </p>
 
-					<h2 id="サポート終了したアプリ">
-						サポート終了したアプリ<a
-							class="anchorjs-link"
-							href="#サポート終了したアプリ"
-							aria-label="Anchor"
-							data-anchorjs-icon=""
-							style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"
-						></a>
-					</h2>
+      <h2 id="サポート終了したアプリ">
+        サポート終了したアプリ<a
+          class="anchorjs-link"
+          href="#サポート終了したアプリ"
+          aria-label="Anchor"
+          style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a>
+      </h2>
 
-					<ul>
-						<li>
-							<a href="https://iranika.github.io/mo-code/"
-								>初代みちくさびゅあー</a
-							> スマホ向けの道草屋ばっくやーど漫画ビュアー。閲覧は可能。
-						</li>
-					</ul>
+      <ul>
+        <li>
+          <a href="https://iranika.github.io/mo-code/">初代みちくさびゅあー</a> スマホ向けの道草屋ばっくやーど漫画ビュアー。閲覧は可能。
+        </li>
+      </ul>
 
-					<h2 id="コントリビュート">
-						コントリビュート<a
-							class="anchorjs-link"
-							href="#コントリビュート"
-							aria-label="Anchor"
-							data-anchorjs-icon=""
-							style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"
-						></a>
-					</h2>
+      <h2 id="コントリビュート">
+        コントリビュート<a
+          class="anchorjs-link"
+          href="#コントリビュート"
+          aria-label="Anchor"
+          style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a>
+      </h2>
 
-					<ul>
-						<li>
-							<a href="https://github.com/dom96/choosenim"
-								>dom96/choosenim</a
-							> Nimのバージョンスイッチツール。僅かながら貢献。
-						</li>
-					</ul>
+      <ul>
+        <li>
+          <a href="https://github.com/dom96/choosenim">dom96/choosenim</a> Nimのバージョンスイッチツール。僅かながら貢献。
+        </li>
+      </ul>
 
-					<h2 id="スキル">
-						スキル<a
-							class="anchorjs-link"
-							href="#スキル"
-							aria-label="Anchor"
-							data-anchorjs-icon=""
-							style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"
-						></a>
-					</h2>
+      <h2 id="スキル">
+        スキル<a
+          class="anchorjs-link"
+          href="#スキル"
+          aria-label="Anchor"
+          style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a>
+      </h2>
 
-					<p>
-						基本、何でも屋。<br />
-						主にインフラ(サーバ+NW)とアプリ(Web)を行ったり来たり。<br
-						/>
-						マーケティング戦略や市場分析とかしつつ、プロトタイピングもしたり。<br
-						/>
-						使い慣れてるのはPowerShell。好きな本は「UNIXという考え方」。
-					</p>
+      <p>
+        基本、何でも屋。<br />
+        主にインフラ(サーバ+NW)とアプリ(Web)を行ったり来たり。<br />
+        マーケティング戦略や市場分析とかしつつ、プロトタイピングもしたり。<br />
+        使い慣れてるのはPowerShell。好きな本は「UNIXという考え方」。
+      </p>
 
-					<h3 id="扱ったことあるやつ最低1年以上">
-						扱ったことあるやつ(最低1年以上)<a
-							class="anchorjs-link"
-							href="#扱ったことあるやつ最低1年以上"
-							aria-label="Anchor"
-							data-anchorjs-icon=""
-							style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"
-						></a>
-					</h3>
+      <h3 id="扱ったことあるやつ">
+        扱ったことあるやつ<a
+          class="anchorjs-link"
+          href="#扱ったことあるやつ"
+          aria-label="Anchor"
+          style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a>
+      </h3>
 
-					<div class="language-plaintext highlighter-rouge">
-						<div class="highlight">
-							<pre
-								class="highlight"><code>const LastUpdate = "2022-04-22"
+      <div class="language-plaintext highlighter-rouge">
+        <div class="highlight">
+          <pre
+            class="highlight"><code>const LastUpdate = "2022-04-22"
 const Language = [PowerShell, Javascript/Typescript, Rust, Python, Nim, PHP, HTML/CSS]
-const WebFramework = [Vue]
+const WebFramework = [Vue, Astro]
 const OS = [Ubuntu, CentOS, WindowsServer, Windows]
 const CloudService = [GCP, AWS, ConoHa, Cloudflare, Firebase, NewRelic]
 const DevelopApps = [ShellScript, SPA, WebExtension, Electron(desktop, mobile)]
 </code></pre>
-						</div>
-					</div>
+        </div>
+      </div>
 
-					<h2 id="支援サイト">
-						支援サイト<a
-							class="anchorjs-link"
-							href="#支援サイト"
-							aria-label="Anchor"
-							data-anchorjs-icon=""
-							style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"
-						></a>
-					</h2>
+      <h2 id="支援サイト">
+        支援サイト<a
+          class="anchorjs-link"
+          href="#支援サイト"
+          aria-label="Anchor"
+          style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a>
+      </h2>
 
-					<p>
-						主にみちくさびゅあーの維持/発展のために支援サイトを開設しました。<br
-						/>
-						ご支援いただける人は下記サービスからどうぞ。
-					</p>
+      <p>
+        主にみちくさびゅあーの維持/発展のために支援サイトを開設しました。<br />
+        ご支援いただける人は下記サービスからどうぞ。
+      </p>
 
-					<ul>
-						<li>
-							<a href="https://ci-en.net/creator/10765">Ci-en</a>
-						</li>
-					</ul>
+      <ul>
+        <li>
+          <a href="https://ci-en.net/creator/10765">Ci-en</a>
+        </li>
+      </ul>
 
-					<h2 id="寄付について">
-						寄付について<a
-							class="anchorjs-link"
-							href="#寄付について"
-							aria-label="Anchor"
-							data-anchorjs-icon=""
-							style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"
-						></a>
-					</h2>
+      <h2 id="寄付について">
+        寄付について<a
+          class="anchorjs-link"
+          href="#寄付について"
+          aria-label="Anchor"
+          style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a>
+      </h2>
 
-					<p>
-						寄付/支援はいつでもウェルカムです。<br />
-						お気軽にどうぞ。
-					</p>
+      <p>
+        寄付/支援はいつでもウェルカムです。<br />
+        お気軽にどうぞ。
+      </p>
 
-					<ol>
-						<li>
-							<p>
-								Amazonほしい物リスト
-								<a
-									href="https://www.amazon.jp/hz/wishlist/ls/2ZHC8L3L1O20S?ref_=wl_share"
-									>これ</a>
-							</p>
-						</li>
-						<li>
-							<p>
-								Kyash
-								<a href="https://www.kyash.co/#top-moneymoving"
-									>公式ページ</a>
-							</p>
+      <ol>
+        <li>
+          <p>
+            Amazonほしい物リスト
+            <a
+              href="https://www.amazon.jp/hz/wishlist/ls/2ZHC8L3L1O20S?ref_=wl_share"
+              >これ</a
+            >
+          </p>
+        </li>
+        <li>
+          <p>
+            Kyash
+            <a href="https://www.kyash.co/#top-moneymoving">公式ページ</a>
+          </p>
 
-							<p>
-								<img
-									src="./kyash.jpg"
-									height="150"
-								/>
-							</p>
-						</li>
-						<li>
-							<p>
-								PayPay<br />
-								<a
-									href="https://paypay.ne.jp/guide/send/?_ga=2.238451843.205875726.1558440708-447181547.1558440708"
-									>公式の説明ページ</a>
-							</p>
-							<p>
-								<img
-									src="./paypay.jpg"
-									height="150"
-								/>
-							</p>
-						</li>
-					</ol>
+          <p>
+            <img src="./kyash.jpg" height="150" />
+          </p>
+        </li>
+        <li>
+          <p>
+            PayPay<br />
+            <a
+              href="https://paypay.ne.jp/guide/send/?_ga=2.238451843.205875726.1558440708-447181547.1558440708"
+              >公式の説明ページ</a
+            >
+          </p>
+          <p>
+            <img src="./paypay.jpg" height="150" />
+          </p>
+        </li>
+      </ol>
 
-					<h2 id="おまけどうしてこのページは味気ないデザインなの">
-						おまけ：どうしてこのページは味気ないデザインなの？<a
-							class="anchorjs-link"
-							href="#おまけどうしてこのページは味気ないデザインなの"
-							aria-label="Anchor"
-							data-anchorjs-icon=""
-							style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"
-						></a>
-					</h2>
+      <h2 id="おまけどうしてこのページは味気ないデザインなの">
+        おまけ：どうしてこのページは味気ないデザインなの？<a
+          class="anchorjs-link"
+          href="#おまけどうしてこのページは味気ないデザインなの"
+          aria-label="Anchor"
+          style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a>
+      </h2>
 
-					<p>
-						古（いにしえ）のインターネットとホームページが大好きだから。<br
-						/>
-						ほとんどテキストで書かれ、画像がチョットだけある。<br />
-						まさしく「文書」だった頃のホームページは今では絶滅危惧種になってしまいました。<br
-						/>
-						とは言え、現代のWebデザインは人類が試行錯誤を経て手に入れた優秀な道具です。
-						見やすく洗練されたデザインのWebページに出会ったら、先人たちに思いを馳せてみてください。
-					</p>
-				</div>
-				<script
-					src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"
-					integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg="
-					crossorigin="anonymous"></script>
-				<script>
-          //@ts-ignore
-					anchors.add();
-				</script>
-			</body>
-		</main>
-	</body>
+      <p>
+        古（いにしえ）のインターネットとホームページが大好きだから。<br />
+        ほとんどテキストで書かれ、画像がチョットだけある。<br />
+        まさしく「文書」だった頃のホームページは今では絶滅危惧種になってしまいました。<br
+        />
+        とは言え、現代のWebデザインは人類が試行錯誤を経て手に入れた優秀な道具です。
+        見やすく洗練されたデザインのWebページに出会ったら、先人たちに思いを馳せてみてください。
+      </p>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"
+      integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg="
+      crossorigin="anonymous"></script>
+    <script>
+      //@ts-ignore
+      anchors.add();
+    </script>
+  </body>
 </html>
