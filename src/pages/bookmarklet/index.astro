@@ -1,10 +1,8 @@
 ---
 // import BrowseNowRIP from "."
-import './style.css';
+import "./style.css";
 
-const BML = import.meta.glob("./*.bml.js", { query: '?raw', import: 'default', eager: true });
-
-
+const BML = import.meta.glob("./*.bml", { query: "?raw", eager: true });
 ---
 
 <html lang="ja">
@@ -32,9 +30,12 @@ const BML = import.meta.glob("./*.bml.js", { query: '?raw', import: 'default', e
         <div class="sectionbody">
           <div class="paragraph">
             <p>
-              iranikaが作ったブックマークレット（Bookmarklet）を公開するおもちゃ箱のページです。<br />
-              ブックマークレットってなんなの？ ⇒ <a href="https://ja.wikipedia.org/wiki/%E3%83%96%E3%83%83%E3%82%AF%E3%83%9E%E3%83%BC%E3%82%AF%E3%83%AC%E3%83%83%E3%83%88"
-                >Wikipediaの解説</a><br />
+              iranikaが作ったブックマークレット（Bookmarklet）を公開するおもちゃ箱のページです。<br
+              />
+              ブックマークレットってなんなの？ ⇒ <a
+                href="https://ja.wikipedia.org/wiki/%E3%83%96%E3%83%83%E3%82%AF%E3%83%9E%E3%83%BC%E3%82%AF%E3%83%AC%E3%83%83%E3%83%88"
+                >Wikipediaの解説</a
+              ><br />
             </p>
           </div>
         </div>
@@ -52,7 +53,8 @@ const BML = import.meta.glob("./*.bml.js", { query: '?raw', import: 'default', e
           </div>
           <div class="listingblock">
             <div class="content">
-              <pre class="highlight"><code class="language-js" data-lang="js" set:text={BML["./BrowseNowRIP.bml.js"]} /></pre>
+              <pre
+                class="highlight"><code class="language-js" data-lang="js" set:text={BML["./BrowseNowRIP.bml"]} /></pre>
             </div>
           </div>
         </div>
@@ -61,92 +63,17 @@ const BML = import.meta.glob("./*.bml.js", { query: '?raw', import: 'default', e
         <h2 id="_browsenowrip_for_misskey_io">BrowseNowRIP for Misskey.io</h2>
         <div class="sectionbody">
           <div class="paragraph">
-            <p set:text="Misskey.io以外のドメインで使いたい場合はソースコードの`https://misskey.io/share` の部分を`https://{使いたいドメイン}/share` に置き換えてください。"/>
+            <p
+              set:text="Misskey.io以外のドメインで使いたい場合はソースコードの`https://misskey.io/share` の部分を`https://{使いたいドメイン}/share` に置き換えてください。"
+            />
           </div>
           <div class="listingblock">
             <div class="content">
-              <pre class="highlight"><code class="language-js" data-lang="js" set:text={BML["./BrowseNowRIP4Misskey.bml.js"]} /></pre>
+              <pre
+                class="highlight"><code class="language-js" data-lang="js" set:text={BML["./BrowseNowRIP4Misskey.bml"]} /></pre>
             </div>
           </div>
         </div>
-      </div>
-      <!-- ギフト機能がなくなったのでコメントアウト
-
-      <div class="sect1">
-        <h2 id="_for_dlsite">For DLsite</h2>
-        <div class="sectionbody">
-          <div class="paragraph">
-            <p>DLsiteで使えるブックマークレット集です。</p>
-          </div>
-          
-          <div class="sect2">
-            <h3 id="_opengift">OpenGift</h3>
-            <div class="paragraph">
-              <p>
-                DLsiteの作品ページからギフトページを開くやつです。
-                ギフトページは購入済みのものしか開けませんので注意してください。
-              </p>
-            </div>
-            <div class="listingblock">
-              <div class="content">
-                <pre
-                  class="highlight"><code class="language-js" data-lang="js" set:text={BML["./OpenGift.bml.js"]} /></pre>
-              </div>
-            </div>
-          </div>
-
-          <div class="sect2">
-            <h3 id="_sss_searchsomesite">SSS: SearchSomeSite</h3>
-            <div class="paragraph">
-              <p>
-                SSSはDLsiteの作品ページから直接BoothやFanzaでタイトル検索ページにタイトルを入れて検索してくれるやつです。
-              </p>
-            </div>
-            <div class="admonitionblock note">
-              <table>
-                <tbody
-                  ><tr>
-                    <td class="icon">
-                      <div class="title">Note</div>
-                    </td>
-                    <td class="content">
-                      下記のコードは新しいタブのページで開きます。現在のタブで開きたい場合は
-                      <strong>window.open(href, '_blank')</strong> を <strong
-                        >window.open(href, '_self')</strong
-                      > に書き直してください。
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="ulist">
-              <ul>
-                <li>
-                  <p>SearchBooth</p>
-                </li>
-              </ul>
-            </div>
-            <div class="listingblock">
-              <div class="content">
-                <pre
-                  class="highlight"><code class="language-js" data-lang="js" set:text=`javascript: (function (e) { var href = "https://booth.pm/ja/search/" + document.querySelector("#work_name").textContent.replace(/【[^【】]*】/g, "") + "?adult=include"; window.open(href, '_blank'); })(encodeURIComponent);` /></pre>
-              </div>
-            </div>
-            <div class="ulist">
-              <ul>
-                <li>
-                  <p>SearchFanza</p>
-                </li>
-              </ul>
-            </div>
-            <div class="listingblock">
-              <div class="content">
-                <pre
-                  class="highlight"><code class="language-js" data-lang="js" set:text=`javascript: (function (e) { var href = "https://booth.pm/ja/search/" + document.querySelector("#work_name").textContent.replace(/【[^【】]*】/g, "") + "?adult=include"; window.open(href, '_blank'); })(encodeURIComponent);` /></pre>
-              </div>
-            </div>
-          </div>
-        </div> -->
       </div>
     </div>
     <div id="footer">
