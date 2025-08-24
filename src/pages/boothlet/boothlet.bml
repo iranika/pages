@@ -1,8 +1,9 @@
 javascript: (function (e) {
-    let target = window.open("http://localhost:4321/boothlet/", null, 'width=520,height=500');
+    let boothlet = "https://iranika.info/boothlet/";
+    let target = window.open(boothlet, null, 'width=520,height=500');
     let pd = JSON.parse(localStorage.getItem("nikalib") ?? `[['', 'localStorageのキーがみつかりませんでした',"",""]]`);
     setTimeout(() => {
-        target.postMessage({ pd: pd }, "http://localhost:4321/");
+        target.postMessage({ pd: pd }, boothlet);
     }, 1000);
     console.log(target, pd);
 })();
