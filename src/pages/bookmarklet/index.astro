@@ -2,7 +2,11 @@
 // import BrowseNowRIP from "."
 import "./style.css";
 
-const BML = import.meta.glob("./*.bml", { query: "?raw", eager: true });
+const BML = import.meta.glob("./*.bml", {
+  query: "?raw",
+  import: "default",
+  eager: true,
+});
 ---
 
 <html lang="ja">
