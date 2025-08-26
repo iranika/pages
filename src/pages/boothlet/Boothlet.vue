@@ -2,8 +2,6 @@
 import { ref } from 'vue'
 import DataTable from 'primevue/datatable';
 import Column from 'primevue/column';
-import ColumnGroup from 'primevue/columngroup';   // optional
-import Row from 'primevue/row';                   // optional
 import { InputText, InputIcon, IconField } from 'primevue';
 import { FilterMatchMode } from '@primevue/core/api';
 
@@ -28,7 +26,6 @@ globalThis.addEventListener("message", (e)=>{
 
 
 <template>
-
   <div>
     <DataTable :value="pd" responsiveLayout="scroll" v-model:filters="filters" filterDisplay="menu" :globalFilterFields="['0', '1', '2']">
       <template #header>

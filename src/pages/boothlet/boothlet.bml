@@ -1,9 +1,1 @@
-javascript: (function (e) {
-    let boothlet = "https://iranika.info/boothlet/";
-    let target = window.open(boothlet, null, 'width=520,height=500');
-    let pd = JSON.parse(localStorage.getItem("nikalib") ?? `[['', 'localStorageのキーがみつかりませんでした',"",""]]`);
-    setTimeout(() => {
-        target.postMessage({ pd: pd }, boothlet);
-    }, 1000);
-    console.log(target, pd);
-})();
+javascript: (function (e) {    let boothlet = "https://iranika.info/boothlet/";    let target = window.open(boothlet, 'popupWindow', 'width=800,height=500,resizable=yes,scrollbars=yes');    let pd = JSON.parse(localStorage.getItem("nikalib") ?? `[['', 'localStorageのキーがみつかりませんでした',"",""]]`);    setTimeout(() => {        target.postMessage({ pd: pd }, "https://iranika.info/");    }, 2000);    console.log(target, pd);})();
