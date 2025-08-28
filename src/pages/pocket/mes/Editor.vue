@@ -9,8 +9,11 @@ import { Select } from 'primevue';
 const pb = new Pocket(import.meta.env.DEV ? "http://127.0.0.1:8090" : "https://pocket.iranika.info")
 
 const isLogin = ref(pb.authStore.isValid)
+if(!isLogin.value){
+  alert("ログインしていません。ログインページに戻ります。")
+  location.href = "/pocket/"
+}
 const text = ref("");
-
 
 const selectText = ref("aaaaa");
 const selectOptions = ref([])
@@ -41,12 +44,32 @@ async function save(){
     alert("失敗");
     console.log(err);
   }
+}
+
+async function create(){
+  // 上限に達しているか確認する
 
 }
+
+class DataStore {
+
+  localFileHandler:any;
+  mesText = ref("")
+
+  async save(){
+
+  }
+  async open(){
+
+  }
+}
+
+
 </script>
 <style>
 .editor {
   border: solid 1px lightgray;
+  width: 800px;
 }
 </style>
 <template>

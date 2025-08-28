@@ -17,6 +17,7 @@
     "@primeuix/themes": "^1.2.3",
     "@primevue/core": "^4.3.7",
     "astro": "^5.12.9",
+    "dexie": "^4.2.0",
     "pagedjs": "^0.4.3",
     "pocketbase": "^0.26.2",
     "primevue": "^4.3.7",

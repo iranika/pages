@@ -27,7 +27,9 @@ async function Logout(){
 <template>
   <div>
     <div v-if="isLogin">
-      ログイン済みです。<br />
+      ログイン済みです。<br/>
+
+      <a href="./mes/">Mes Editor</a><br/>
       <button @click="Logout">ログアウト</button>
     </div>
     <div v-else>
