@@ -1,0 +1,114 @@
+/* Profile page: simple layout tweaks (mobile-first) */
+
+.profile {
+  max-width: 40rem;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.profile > h1:first-child {
+  margin-top: 0;
+}
+
+.profile-intro {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.25rem;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
+}
+
+.profile-icon {
+  width: 8rem;
+  max-width: 40vw;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.profile-intro-text {
+  flex: 1 1 12rem;
+  min-width: 0;
+}
+
+.profile-intro-text p {
+  margin-bottom: 0.5em;
+}
+
+.profile-intro-text p:last-child {
+  margin-bottom: 0;
+}
+
+.profile h2 {
+  margin-top: 1.75em;
+  scroll-margin-top: 0.5rem;
+}
+
+.profile h3 {
+  margin-top: 1.25em;
+}
+
+.profile ul,
+.profile ol {
+  padding-inline-start: 1.25em;
+}
+
+.profile li {
+  margin-bottom: 0.35em;
+}
+
+.profile li > p {
+  margin-bottom: 0.5em;
+}
+
+.profile a {
+  overflow-wrap: anywhere;
+}
+
+.profile pre {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.profile pre code {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.profile .donation-qr {
+  width: 9rem;
+  max-width: 45vw;
+  height: auto;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 480px) {
+  .profile h1 {
+    font-size: 1.75rem;
+  }
+
+  .profile h2 {
+    font-size: 1.35rem;
+  }
+
+  .profile h3 {
+    font-size: 1.15rem;
+  }
+
+  .profile-intro {
+    flex-direction: column;
+  }
+
+  .profile-icon {
+    width: 6.5rem;
+  }
+
+  .profile pre {
+    font-size: 0.75rem;
+    padding: 0.625rem 0.75rem;
+  }
+}
