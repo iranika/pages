@@ -3,10 +3,13 @@
 import icon from "../assets/icon.jpg";
 import kyash from "../assets/kyash.jpg";
 
-<img src={icon.src} alt="いらにかのプロフィールアイコン" width="200" />
-
-名前：いらにか（iranika）  
-※Twitterのアイコンは頻繁に変わります。
+<div class="profile-intro">
+  <img class="profile-icon" src={icon.src} alt="いらにかのプロフィールアイコン" />
+  <div class="profile-intro-text">
+    <p>名前：いらにか（iranika）</p>
+    <p>※Twitterのアイコンは頻繁に変わります。</p>
+  </div>
+</div>
 
 
 ## Contact as
@@ -23,7 +26,7 @@ import kyash from "../assets/kyash.jpg";
 - [collie](https://github.com/iranika/collie)  Webブラウザテストを対話形式で記述&検証するためのツール。Scoop manifest付属。
 - [MimiCa](https://mimica.iranika.info/)  実験場。思いついたアプリのプロトタイプ公開場所。
 
-雑なおもちゃ箱→[ブックマークレット ボックス](/src/pages/bookmarklet/)
+雑なおもちゃ箱→[ブックマークレット ボックス](/bookmarklet/)
 （ブックマークレット、実はモバイルブラウザでも動くんです）
 
 ## サポート終了したアプリ
@@ -46,11 +49,18 @@ import kyash from "../assets/kyash.jpg";
 
 ```js
 const LastUpdate = "2022-04-22"
-const Language = [PowerShell, Javascript/Typescript, Rust, Python, Nim, PHP, HTML/CSS]
+const Language = [
+  PowerShell, Javascript/Typescript, Rust, Python,
+  Nim, PHP, HTML/CSS,
+]
 const WebFramework = [Vue, Astro]
 const OS = [Ubuntu, CentOS, WindowsServer, Windows]
-const CloudService = [GCP, AWS, ConoHa, Cloudflare, Firebase, NewRelic]
-const DevelopApps = [ShellScript, SPA, WebExtension, Electron(desktop, mobile)]
+const CloudService = [
+  GCP, AWS, ConoHa, Cloudflare, Firebase, NewRelic,
+]
+const DevelopApps = [
+  ShellScript, SPA, WebExtension, Electron(desktop, mobile),
+]
 ```
 
 ## 支援サイト
@@ -72,7 +82,7 @@ const DevelopApps = [ShellScript, SPA, WebExtension, Electron(desktop, mobile)]
 1. Kyash
     [公式ページ](https://www.kyash.co/#top-moneymoving)  
 
-    <img src={kyash.src} alt="Kyash の送金用 QR コード" width="150" />
+    <img class="donation-qr" src={kyash.src} alt="Kyash の送金用 QR コード" />
 
 1. 楽天キャッシュ(楽天ペイ)  
     [公式の説明ページ](https://pay.rakuten.co.jp/guide/#section-send)  

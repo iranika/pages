@@ -1,6 +1,7 @@
 ---
 // Component Imports
 import "./bookmarklet/style.css";
+import "../styles/profile.css";
 import Profile from "../components/Profile.mdx";
 // Full Astro Component Syntax:
 // https://docs.astro.build/basics/astro-components/
@@ -9,22 +10,29 @@ import Profile from "../components/Profile.mdx";
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <style>
       html,
       body {
-        font-family: system-ui;
+        font-family: system-ui, sans-serif;
         margin: 0;
       }
       body {
-        padding: 2rem;
+        padding: 1rem;
+      }
+      @media (min-width: 640px) {
+        body {
+          padding: 1.5rem 2rem;
+        }
       }
     </style>
   </head>
   <body>
-    <Profile />
+    <main class="profile">
+      <Profile />
+    </main>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"
       integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg="
