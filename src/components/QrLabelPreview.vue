@@ -2,15 +2,23 @@
 import { ref } from 'vue';
 import VueQrcode from 'vue-qrcode';
 
+const maxUrlBytes = 512;
 const draftUrl = ref('https://example.com/');
 const previewUrl = ref(draftUrl.value);
 const status = ref('例URLを編集して、プレビューを更新できます。');
 
 function updatePreview() {
+  const inputUrl = draftUrl.value.trim();
+
+  if (new TextEncoder().encode(inputUrl).length > maxUrlBytes) {
+    status.value = `URLはUTF-8で${maxUrlBytes}バイト以内にしてください。`;
+    return;
+  }
+
   let parsedUrl;
 
   try {
-    parsedUrl = new URL(draftUrl.value.trim());
+    parsedUrl = new URL(inputUrl);
   } catch {
     status.value = 'http:// または https:// で始まるURLを入力してください。';
     return;
@@ -21,7 +29,14 @@ function updatePreview() {
     return;
   }
 
-  previewUrl.value = parsedUrl.href;
+  const normalizedUrl = parsedUrl.href;
+
+  if (new TextEncoder().encode(normalizedUrl).length > maxUrlBytes) {
+    status.value = `URLはUTF-8で${maxUrlBytes}バイト以内にしてください。`;
+    return;
+  }
+
+  previewUrl.value = normalizedUrl;
   status.value = 'プレビューを更新しました。';
 }
 </script>

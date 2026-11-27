@@ -285,14 +285,12 @@ input:focus-visible {
   color: var(--red);
 }
 
-.project-footnote,
-.section-caption,
-.note-disclaimer {
+.project-meta {
   color: var(--muted);
   font-size: 0.85rem;
 }
 
-.project-card .project-footnote {
+.project-card .project-meta {
   margin-top: 1.25rem;
 }
 
@@ -313,10 +311,6 @@ input:focus-visible {
   font-size: 0.8rem;
 }
 
-.section-caption {
-  margin: 0.85rem 0 0;
-}
-
 .note-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -335,11 +329,6 @@ input:focus-visible {
 
 .note-label {
   color: var(--muted);
-}
-
-.note-disclaimer {
-  padding-top: 0.75rem;
-  border-top: 1px solid var(--line);
 }
 
 .link-list {
@@ -692,5 +681,11 @@ input:focus-visible {
   .site-footer {
     align-items: flex-start;
     flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }

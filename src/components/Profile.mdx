@@ -49,7 +49,7 @@ import QrLabelPreview from "./QrLabelPreview.vue";
           <p class="project-type">APP / VIEWER</p>
           <h3><a href="https://movue.iranika.info/">みちくさびゅあー</a></h3>
           <p>スマホ向けの道草屋ばっくやーど漫画ビュアー。</p>
-          <p class="project-footnote">プロフィール記載：公式認定済み。</p>
+          <p class="project-meta">公式認定済。</p>
         </article>
 
         <article class="project-card project-card--qr">
@@ -69,31 +69,28 @@ import QrLabelPreview from "./QrLabelPreview.vue";
           <p class="project-type">DEVELOPER TOOL / TESTING</p>
           <h3><a href="https://github.com/iranika/collie">collie</a></h3>
           <p>Webブラウザテストを対話形式で記述・検証するためのツール。Scoop manifest付属。</p>
-          <p class="project-footnote">紹介文は現在のプロフィール記載に基づいています。</p>
         </article>
       </div>
-      <p class="section-caption">実画面の画像がない作品は、架空のスクリーンショットを使わず、説明と実際のリンクを掲載しています。</p>
     </section>
 
     <section class="home-section" id="notes">
       <header class="section-heading">
         <span class="section-number">02</span>
         <div>
-          <p class="eyebrow">HOW IT WORKS</p>
-          <h2>コードから見えること</h2>
+          <p class="eyebrow">TECHNICAL NOTES</p>
+          <h2>技術のメモ</h2>
         </div>
       </header>
       <div class="note-grid">
         <article class="note-card">
-          <p class="note-label">OBSERVED / QR LABEL</p>
-          <h3>URLからラベルへ</h3>
-          <p>既存のQR印刷くんは、改行区切りURLからQRを作り、A4向けの印刷レイアウトを持ちます。実装ではURLを12件ずつページ分けし、印刷ボタンを押したときに印刷画面を開きます。</p>
-          <p class="note-disclaimer">これはコードから確認できる動作の紹介です。本人が意図した設計理由や背景は、確認できていません。</p>
+          <p class="note-label">QR LABEL / PRINT</p>
+          <h3>URLからラベルを作る</h3>
+          <p>URLをQRラベルにして、A4向けのレイアウトで印刷できます。複数のURLは12件ずつページに分かれ、印刷はボタンから始められます。</p>
         </article>
         <article class="note-card note-card--plain">
           <p class="note-label">ASTRO / MDX / VUE</p>
-          <h3>読む部分と、触れる部分</h3>
-          <p>ホームの文章はAstroとMDXを軸にし、URL入力とQRプレビューのように操作が必要な箇所はVueで動かします。ページ全体をアプリにせず、必要な部分だけを操作できる構成です。</p>
+          <h3>使っている技術</h3>
+          <p>このページはAstroとMDXで構成し、URL入力とQRプレビューはVueで動かしています。</p>
         </article>
       </div>
     </section>
@@ -156,9 +153,9 @@ import QrLabelPreview from "./QrLabelPreview.vue";
           <p><a href="https://github.com/dom96/choosenim">dom96/choosenim</a> — Nimのバージョンスイッチツールに、僅かながら貢献。</p>
         </div>
         <div class="skills-panel">
-          <p class="project-type">SKILLS / PROFILE LIST</p>
+          <p class="project-type">SKILLS / EXPERIENCE</p>
           <h3>扱ったことがあるもの</h3>
-          <p class="project-footnote">プロフィール記載の「最低1年以上使ったことがある」もの（最終更新: 2022-04-22）。</p>
+          <p class="project-meta">1年以上経験のある技術（最終更新: 2022-04-22）。</p>
           <dl class="skills-list">
             <dt>言語・Web</dt><dd>PowerShell、JavaScript / TypeScript、Rust、Python、Nim、PHP、HTML / CSS、Vue、Astro</dd>
             <dt>OS</dt><dd>Ubuntu、CentOS、Windows Server、Windows</dd>
