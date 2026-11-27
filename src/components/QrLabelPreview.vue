@@ -58,7 +58,7 @@ function updatePreview() {
       <p class="qr-demo-status" aria-live="polite">{{ status }}</p>
     </form>
     <div class="qr-label-preview" aria-label="QRラベルのプレビュー">
-      <VueQrcode :value="previewUrl" :width="112" />
+      <VueQrcode :value="previewUrl" :width="512" :margin="4" />
       <div class="qr-label-copy">
         <span>LABEL / 01</span>
         <strong>QRラベル</strong>

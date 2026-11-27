@@ -542,9 +542,9 @@ input:focus-visible {
 .qr-label-preview canvas,
 .qr-label-preview img {
   display: block;
-  width: 7rem;
-  height: 7rem;
-  flex: 0 0 7rem;
+  width: 16rem;
+  height: 16rem;
+  flex: 0 0 16rem;
 }
 
 .qr-label-copy {
@@ -666,16 +666,21 @@ input:focus-visible {
   }
 
   .qr-label-preview {
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     gap: 0.65rem;
   }
 
   .qr-label-preview svg,
   .qr-label-preview canvas,
   .qr-label-preview img {
-    width: 5.5rem;
-    height: 5.5rem;
-    flex-basis: 5.5rem;
+    width: min(16rem, 100%);
+    height: auto;
+    flex-basis: auto;
+  }
+
+  .qr-label-copy {
+    width: 100%;
   }
 
   .site-footer {
