@@ -1,99 +1,213 @@
-# プロフィール
-
 import icon from "../assets/icon.jpg";
 import kyash from "../assets/kyash.jpg";
+import QrLabelPreview from "./QrLabelPreview.vue";
 
-<div class="profile-intro">
-  <img class="profile-icon" src={icon.src} alt="いらにかのプロフィールアイコン" />
-  <div class="profile-intro-text">
-    <p>名前：いらにか（iranika）</p>
-    <p>※Twitterのアイコンは頻繁に変わります。</p>
-  </div>
+<div class="homepage">
+  <header class="site-header">
+    <a class="wordmark" href="/" aria-label="iranika.info ホーム">
+      <span class="wordmark-mark">i.</span>
+      <span>iranika.info</span>
+    </a>
+    <nav class="site-nav" aria-label="ページ内目次">
+      <a href="#works">作品</a>
+      <a href="#notes">技術判断</a>
+      <a href="#lab">実験・道具</a>
+      <a href="#about">人柄・連絡</a>
+    </nav>
+  </header>
+
+  <main class="home-main">
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow">PERSONAL WEB / IRANIKA</p>
+        <h1>いらにか <span>iranika</span></h1>
+        <p class="hero-lead"><span>文書のように読めて、</span><span>道具として動く。</span></p>
+        <p class="hero-description">
+          インフラとWebアプリを行き来しながら、思いついたものを試しています。ここは作ったものに触れ、考えを文章でたどれる個人開発ノートです。
+        </p>
+        <div class="hero-actions">
+          <a class="text-link" href="#works">作ったものを見る <span aria-hidden="true">↘</span></a>
+          <a class="text-link" href="#why">文書への愛着を読む <span aria-hidden="true">↘</span></a>
+        </div>
+      </div>
+      <figure class="hero-portrait">
+        <img class="profile-icon" src={icon.src} alt="いらにかのプロフィールアイコン" />
+        <figcaption>いらにか / iranika — Twitterのアイコンは頻繁に変わります。</figcaption>
+      </figure>
+    </section>
+
+    <section class="home-section" id="works">
+      <header class="section-heading">
+        <span class="section-number">01</span>
+        <div>
+          <p class="eyebrow">SELECTED WORKS</p>
+          <h2>作ったもの</h2>
+        </div>
+      </header>
+      <div class="project-grid">
+        <div class="project-grid-left">
+          <article class="project-card project-card--viewer">
+            <p class="project-type">APP / VIEWER</p>
+            <h3><a href="https://movue.iranika.info/">みちくさびゅあー</a></h3>
+            <p>スマホ向けの道草屋ばっくやーど漫画ビュアー。</p>
+            <p class="project-meta">公式認定済。</p>
+          </article>
+
+          <article class="project-card project-card--collie">
+            <p class="project-type">DEVELOPER TOOL / TESTING</p>
+            <h3><a href="https://github.com/iranika/collie">collie</a></h3>
+            <p>Webブラウザテストを対話形式で記述・検証するためのツール。Scoop manifest付属。</p>
+          </article>
+        </div>
+
+        <article class="project-card project-card--qr">
+          <div class="project-card-heading">
+            <div>
+              <p class="project-type">WEB TOOL / QR LABEL</p>
+              <h3>QR印刷くん</h3>
+            </div>
+            <span class="project-index">02</span>
+          </div>
+          <p>URLをQRラベルにして印刷するツール。例URLを編集し、プレビューを更新して変化を試せます。</p>
+          <QrLabelPreview client:load />
+          <a class="text-link" href="/label">既存の印刷ツールを開く <span aria-hidden="true">↗</span></a>
+        </article>
+      </div>
+    </section>
+
+    <section class="home-section" id="notes">
+      <header class="section-heading">
+        <span class="section-number">02</span>
+        <div>
+          <p class="eyebrow">TECHNICAL NOTES</p>
+          <h2>技術のメモ</h2>
+        </div>
+      </header>
+      <div class="note-grid">
+        <article class="note-card">
+          <p class="note-label">QR LABEL / PRINT</p>
+          <h3>URLからラベルを作る</h3>
+          <p>URLをQRラベルにして、A4向けのレイアウトで印刷できます。複数のURLは12件ずつページに分かれ、印刷はボタンから始められます。</p>
+        </article>
+        <article class="note-card note-card--plain">
+          <p class="note-label">ASTRO / MDX / VUE</p>
+          <h3>使っている技術</h3>
+          <p>このページはAstroとMDXで構成し、URL入力とQRプレビューはVueで動かしています。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="home-section" id="lab">
+      <header class="section-heading">
+        <span class="section-number">03</span>
+        <div>
+          <p class="eyebrow">EXPERIMENTS &amp; TOOLS</p>
+          <h2>実験・道具</h2>
+        </div>
+      </header>
+      <div class="link-list">
+        <article class="link-item">
+          <div><p class="project-type">EXPERIMENT</p><h3><a href="https://mimica.iranika.info/">MimiCa</a></h3></div>
+          <p>思いついたアプリのプロトタイプを公開する実験場。</p>
+        </article>
+        <article class="link-item">
+          <div><p class="project-type">BOOKMARKLETS</p><h3><a href="/bookmarklet/">ブックマークレット ボックス</a></h3></div>
+          <p>BrowseNowRIPなど、自作のブックマークレットを置いています。モバイルブラウザでも動きます。</p>
+        </article>
+        <article class="link-item">
+          <div><p class="project-type">APP</p><h3><a href="https://stamp.iranika.info/">Nikaスタンプ</a></h3></div>
+          <p>道草屋のスタンプっぽい画像を活用するアプリ。</p>
+        </article>
+        <article class="link-item">
+          <div><p class="project-type">BROWSER TOOL</p><h3><a href="https://iranika.github.io/BrowseNowRIP/">BrowseNowRIP</a></h3></div>
+          <p>閲覧中のWebページをツイートするためのブックマークレットアプリ。</p>
+        </article>
+        <article class="link-item">
+          <div><p class="project-type">EXPERIMENT</p><h3><a href="/boothlet/">Boothlet</a></h3></div>
+          <p>リポジトリにある検索テーブルの小さな実験。</p>
+        </article>
+      </div>
+      <aside class="archive-note">
+        <p class="project-type">ARCHIVE / SUPPORT ENDED</p>
+        <p><a href="https://iranika.github.io/mo-code/">初代みちくさびゅあー</a>はサポート終了したアプリです。閲覧は可能です。</p>
+      </aside>
+    </section>
+
+    <section class="home-section" id="about">
+      <header class="section-heading">
+        <span class="section-number">04</span>
+        <div>
+          <p class="eyebrow">ABOUT / CONTACT</p>
+          <h2>人柄・連絡</h2>
+        </div>
+      </header>
+      <div class="about-grid">
+        <div class="about-copy">
+          <p class="about-name">いらにか（iranika）</p>
+          <p>基本、何でも屋。主にインフラ（サーバー・ネットワーク）とアプリ（Web）を行ったり来たり。マーケティング戦略や市場分析をしつつ、プロトタイピングもしています。</p>
+          <p>使い慣れているのはPowerShell。好きな本は『UNIXという考え方』。</p>
+          <h3>連絡先</h3>
+          <ul class="contact-list">
+            <li>Twitter: <a href="https://twitter.com/happy_packet">いらにか（@happy_packet）</a></li>
+            <li>GitHub: <a href="https://github.com/iranika">iranika</a></li>
+          </ul>
+          <h3>コントリビュート</h3>
+          <p><a href="https://github.com/dom96/choosenim">dom96/choosenim</a> — Nimのバージョンスイッチツールに、僅かながら貢献。</p>
+        </div>
+        <div class="skills-panel">
+          <p class="project-type">SKILLS / EXPERIENCE</p>
+          <h3>扱ったことがあるもの</h3>
+          <p class="project-meta">1年以上経験のある技術（最終更新: 2022-04-22）。</p>
+          <dl class="skills-list">
+            <dt>言語・Web</dt><dd>PowerShell、JavaScript / TypeScript、Rust、Python、Nim、PHP、HTML / CSS、Vue、Astro</dd>
+            <dt>OS</dt><dd>Ubuntu、CentOS、Windows Server、Windows</dd>
+            <dt>クラウド等</dt><dd>GCP、AWS、ConoHa、Cloudflare、Firebase、NewRelic</dd>
+            <dt>開発</dt><dd>Shell Script、SPA、Web Extension、Electron（desktop / mobile）</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section support-section" id="support">
+      <header class="section-heading">
+        <span class="section-number">05</span>
+        <div>
+          <p class="eyebrow">SUPPORT</p>
+          <h2>支援について</h2>
+        </div>
+      </header>
+      <p>主にみちくさびゅあーの維持・発展のために支援サイトを開設しました。ご支援いただける方は下記サービスからどうぞ。</p>
+      <div class="support-grid">
+        <article class="support-card">
+          <h3><a href="https://ci-en.net/creator/10765">Ci-en</a></h3>
+          <p>支援サイト</p>
+        </article>
+        <article class="support-card">
+          <h3><a href="https://www.amazon.jp/hz/wishlist/ls/2ZHC8L3L1O20S?ref_=wl_share">Amazonほしい物リスト</a></h3>
+          <p>寄付・支援はいつでも歓迎です。お気軽にどうぞ。</p>
+        </article>
+        <article class="support-card">
+          <h3><a href="https://www.kyash.co/#top-moneymoving">Kyash</a></h3>
+          <img class="donation-qr" src={kyash.src} alt="Kyash の送金用 QR コード" />
+        </article>
+        <article class="support-card">
+          <h3><a href="https://pay.rakuten.co.jp/guide/#section-send">楽天キャッシュ（楽天ペイ）</a></h3>
+          <p>Twitterで<a href="https://twitter.com/happy_packet">いらにか（@happy_packet）</a>にDMで送金リンクを送ってください。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="editor-note" id="why">
+      <p class="eyebrow">A NOTE ABOUT THIS PAGE</p>
+      <h2>どうしてこのページは、文書を意識したつくりなの？</h2>
+      <p>古（いにしえ）のインターネットとホームページが大好きだから。</p>
+      <p>ほとんどテキストで書かれ、画像がちょっとだけある。まさしく「文書」だった頃のホームページは、今では絶滅危惧種になってしまいました。</p>
+      <p>とは言え、現代のWebデザインは人類が試行錯誤を経て手に入れた優秀な道具です。見やすく洗練されたデザインのWebページに出会ったら、先人たちに思いを馳せてみてください。</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="wordmark" href="#top"><span class="wordmark-mark">i.</span><span>iranika.info</span></a>
+    <a href="#top">ページの先頭へ ↑</a>
+  </footer>
 </div>
-
-
-## Contact as
-
-- Twitter: [いらにか(@happy_packet)](https://twitter.com/happy_packet)  
-- Github: [iranika](https://github.com/iranika)
-
-
-## 公開しているアプリ
-
-- [みちくさびゅあー](https://movue.iranika.info/) スマホ向けの道草屋ばっくやーど漫画ビュアー。公式認定済。
-- [Nikaスタンプ](https://stamp.iranika.info/) 道草屋のスタンプっぽい画像を活用するアプリ。
-- [BrowseNowRIP](https://iranika.github.io/BrowseNowRIP/) 閲覧中のWEBページをツイートするためのブックマークレットアプリ。
-- [collie](https://github.com/iranika/collie)  Webブラウザテストを対話形式で記述&検証するためのツール。Scoop manifest付属。
-- [MimiCa](https://mimica.iranika.info/)  実験場。思いついたアプリのプロトタイプ公開場所。
-
-雑なおもちゃ箱→[ブックマークレット ボックス](/bookmarklet/)
-（ブックマークレット、実はモバイルブラウザでも動くんです）
-
-## サポート終了したアプリ
-
-- [初代みちくさびゅあー](https://iranika.github.io/mo-code/) スマホ向けの道草屋ばっくやーど漫画ビュアー。閲覧は可能。
-
-## コントリビュート
-
-- [dom96/choosenim](https://github.com/dom96/choosenim) Nimのバージョンスイッチツール。僅かながら貢献。
-
-
-## スキル
-
-基本、何でも屋。  
-主にインフラ(サーバ+NW)とアプリ(Web)を行ったり来たり。  
-マーケティング戦略や市場分析とかしつつ、プロトタイピングもしたり。  
-使い慣れてるのはPowerShell。好きな本は「UNIXという考え方」。
-
-### 扱ったことあるやつ(最低1年以上)
-
-```js
-const LastUpdate = "2022-04-22"
-const Language = [
-  PowerShell, Javascript/Typescript, Rust, Python,
-  Nim, PHP, HTML/CSS,
-]
-const WebFramework = [Vue, Astro]
-const OS = [Ubuntu, CentOS, WindowsServer, Windows]
-const CloudService = [
-  GCP, AWS, ConoHa, Cloudflare, Firebase, NewRelic,
-]
-const DevelopApps = [
-  ShellScript, SPA, WebExtension, Electron(desktop, mobile),
-]
-```
-
-## 支援サイト
-
-主にみちくさびゅあーの維持/発展のために支援サイトを開設しました。  
-ご支援いただける人は下記サービスからどうぞ。
-
-- [Ci-en](https://ci-en.net/creator/10765)
-
-
-## 寄付について
-
-寄付/支援はいつでもウェルカムです。  
-お気軽にどうぞ。  
-
-1. Amazonほしい物リスト
-    [これ](https://www.amazon.jp/hz/wishlist/ls/2ZHC8L3L1O20S?ref_=wl_share)
-
-1. Kyash
-    [公式ページ](https://www.kyash.co/#top-moneymoving)  
-
-    <img class="donation-qr" src={kyash.src} alt="Kyash の送金用 QR コード" />
-
-1. 楽天キャッシュ(楽天ペイ)  
-    [公式の説明ページ](https://pay.rakuten.co.jp/guide/#section-send)  
-    ツイッターで[いらにか(@happy_packet)](https://twitter.com/happy_packet)にDMで楽天キャッシュの送金リンクを送ってください。  
-    
-
-## おまけ：どうしてこのページは味気ないデザインなの？
-
-古（いにしえ）のインターネットとホームページが大好きだから。  
-ほとんどテキストで書かれ、画像がチョットだけある。  
-まさしく「文書」だった頃のホームページは今では絶滅危惧種になってしまいました。  
-とは言え、現代のWebデザインは人類が試行錯誤を経て手に入れた優秀な道具です。
-見やすく洗練されたデザインのWebページに出会ったら、先人たちに思いを馳せてみてください。  
-

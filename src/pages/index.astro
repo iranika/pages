@@ -1,10 +1,6 @@
 ---
-// Component Imports
-import "./bookmarklet/style.css";
-import "../styles/profile.css";
+import "../styles/home.css";
 import Profile from "../components/Profile.mdx";
-// Full Astro Component Syntax:
-// https://docs.astro.build/basics/astro-components/
 ---
 
 <html lang="ja">
@@ -12,34 +8,11 @@ import Profile from "../components/Profile.mdx";
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="いらにかの個人開発ノート。作ったWebの道具と、その背景にある文章を紹介します。" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <style>
-      html,
-      body {
-        font-family: system-ui, sans-serif;
-        margin: 0;
-      }
-      body {
-        padding: 1rem;
-      }
-      @media (min-width: 640px) {
-        body {
-          padding: 1.5rem 2rem;
-        }
-      }
-    </style>
+    <title>いらにか | 読める、触れる、個人開発ノート</title>
   </head>
   <body>
-    <main class="profile">
-      <Profile />
-    </main>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"
-      integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg="
-      crossorigin="anonymous"></script>
-    <script>
-      //@ts-ignore
-      anchors.add();
-    </script>
+    <Profile />
   </body>
 </html>
