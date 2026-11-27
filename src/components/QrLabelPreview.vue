@@ -3,6 +3,7 @@ import { ref } from 'vue';
 import VueQrcode from 'vue-qrcode';
 
 const maxUrlBytes = 512;
+const qrColor = { dark: '#000000ff', light: '#ffffffff' };
 const draftUrl = ref('https://example.com/');
 const previewUrl = ref(draftUrl.value);
 const status = ref('例URLを編集して、プレビューを更新できます。');
@@ -58,7 +59,7 @@ function updatePreview() {
       <p class="qr-demo-status" aria-live="polite">{{ status }}</p>
     </form>
     <div class="qr-label-preview" aria-label="QRラベルのプレビュー">
-      <VueQrcode :value="previewUrl" :width="512" :margin="4" />
+      <VueQrcode :value="previewUrl" :width="512" :margin="4" :color="qrColor" type="image/png" />
       <div class="qr-label-copy">
         <span>LABEL / 01</span>
         <strong>QRラベル</strong>
