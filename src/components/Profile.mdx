@@ -21,7 +21,7 @@ import QrLabelPreview from "./QrLabelPreview.vue";
       <div class="hero-copy">
         <p class="eyebrow">PERSONAL WEB / IRANIKA</p>
         <h1>いらにか <span>iranika</span></h1>
-        <p class="hero-lead">文書のように読めて、道具として動く。</p>
+        <p class="hero-lead"><span>文書のように読めて、</span><span>道具として動く。</span></p>
         <p class="hero-description">
           インフラとWebアプリを行き来しながら、思いついたものを試しています。ここは作ったものに触れ、考えを文章でたどれる個人開発ノートです。
         </p>
@@ -45,12 +45,20 @@ import QrLabelPreview from "./QrLabelPreview.vue";
         </div>
       </header>
       <div class="project-grid">
-        <article class="project-card project-card--viewer">
-          <p class="project-type">APP / VIEWER</p>
-          <h3><a href="https://movue.iranika.info/">みちくさびゅあー</a></h3>
-          <p>スマホ向けの道草屋ばっくやーど漫画ビュアー。</p>
-          <p class="project-meta">公式認定済。</p>
-        </article>
+        <div class="project-grid-left">
+          <article class="project-card project-card--viewer">
+            <p class="project-type">APP / VIEWER</p>
+            <h3><a href="https://movue.iranika.info/">みちくさびゅあー</a></h3>
+            <p>スマホ向けの道草屋ばっくやーど漫画ビュアー。</p>
+            <p class="project-meta">公式認定済。</p>
+          </article>
+
+          <article class="project-card project-card--collie">
+            <p class="project-type">DEVELOPER TOOL / TESTING</p>
+            <h3><a href="https://github.com/iranika/collie">collie</a></h3>
+            <p>Webブラウザテストを対話形式で記述・検証するためのツール。Scoop manifest付属。</p>
+          </article>
+        </div>
 
         <article class="project-card project-card--qr">
           <div class="project-card-heading">
@@ -63,12 +71,6 @@ import QrLabelPreview from "./QrLabelPreview.vue";
           <p>URLをQRラベルにして印刷するツール。例URLを編集し、プレビューを更新して変化を試せます。</p>
           <QrLabelPreview client:load />
           <a class="text-link" href="/label">既存の印刷ツールを開く <span aria-hidden="true">↗</span></a>
-        </article>
-
-        <article class="project-card project-card--collie">
-          <p class="project-type">DEVELOPER TOOL / TESTING</p>
-          <h3><a href="https://github.com/iranika/collie">collie</a></h3>
-          <p>Webブラウザテストを対話形式で記述・検証するためのツール。Scoop manifest付属。</p>
         </article>
       </div>
     </section>

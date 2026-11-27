@@ -168,6 +168,10 @@ input:focus-visible {
   line-height: 1.45;
 }
 
+.hero-lead span {
+  display: block;
+}
+
 .hero-description {
   max-width: 39rem;
   margin: 0;
@@ -242,6 +246,14 @@ input:focus-visible {
   align-items: start;
 }
 
+.project-grid-left {
+  display: grid;
+  grid-column: span 5;
+  gap: 1rem;
+  align-content: start;
+  min-width: 0;
+}
+
 .project-card {
   min-width: 0;
   padding: clamp(1.1rem, 2.5vw, 1.75rem);
@@ -250,17 +262,12 @@ input:focus-visible {
 }
 
 .project-card--viewer {
-  grid-column: span 5;
   min-height: 14rem;
 }
 
 .project-card--qr {
   grid-column: span 7;
   background: var(--wash);
-}
-
-.project-card--collie {
-  grid-column: span 5;
 }
 
 .project-card h3,
@@ -599,9 +606,12 @@ input:focus-visible {
     width: 7rem;
   }
 
-  .project-card--viewer,
-  .project-card--qr,
-  .project-card--collie {
+  .project-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .project-grid-left,
+  .project-card--qr {
     grid-column: 1 / -1;
   }
 
